@@ -92,10 +92,9 @@ function checkRoundWinner(playerPick, computerPick) {
         computer.score++;
     }
 	setGamePoints();
-	//checkIfEndGame();
+	checkIfEndGame();
 }
-checkIfEndGame();
-////////
+
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
 
@@ -110,13 +109,14 @@ function setGamePoints() {
 }
 
 function checkIfEndGame () {
-if (player.score || computer.score==10) {gameWinner;}
+if (player.score ==10) {gameWinner();}
+ if	(computer.score==10) {gameWinner();}
 }
 function gameWinner() {
 	if (player.score ==10) {
-		prompt('Wygrywa,' +player.name);
+		alert('Wygrywa,' +player.name);
 	}
-	else {prompt('Wygrywa computer');
+	else {alert('Wygrywa computer');
 }
 	newGame();
 }
